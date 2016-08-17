@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>进度条.html</title>
+	
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="this is my page">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+   	<style type="text/css">
+   		.my-progress
+   		{
+   			-webkit-appearance: none;
+   		}
+   		.my-progress:: -webkit-progress-bar
+   		{
+   			background-color: #fff;
+   		}
+   		.content::after 
+   		{
+   			content: "bbbb";
+   			color: #f40;
+   		}
+   	</style> 
+   
+  </head>
+  
+  <body>
+    	<div class="content">aaaa</div>
+    	<!-- 数据列表呈现需要载体 -->
+    	<input type="text" list="input_list">
+    	<datalist id="input_list">
+    		<option value="laoma"></option>
+    		<option value="lisi"></option>
+    	</datalist>
+    	<br>
+    	<!-- 状态指示器 -->
+    	<progress></progress>
+    	<!-- 进度条默认最大值是1 -->
+    	<progress class="my-progress" value="10" max="100"></progress>
+   
+  </body>
+</html>
