@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>data-attr.html</title>
+	
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="this is my page">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <script type="text/javascript">
+    	window.onload = function()
+    	{
+    		var data = {
+    			1:{name:"张三1",age:18},
+    			2:{name:"张三2",age:19},
+    			3:{name:"张三3",age:20}
+    		};
+    		var list = document.getElementById("list");
+    		for(var key in data)
+    		{
+    			var item = data[key];
+    			var liElement = document.createElement("li");
+    			//liElement.innerHTML = item.name;
+    			//list.appendChild(liElement);
+    			liElement.appendChild(document.createTextNode(item.name));
+    			liElement.setAttribute("data-age",item.age);
+    			list.appendChild(liElement);  //变量本地化
+    			liElement.addEventListener("click",function(){
+    				console.log(this.getAttribute("data-age"));
+    			});
+    		}
+   		
+    	}
+    </script>
+  </head>
+  
+  <body>
+    <ul id="list">
+    	
+    </ul>
+    <div id="info">
+    	
+    </div>
+  </body>
+</html>
